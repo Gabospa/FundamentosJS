@@ -43,15 +43,15 @@ class Juego {
     }
 
     iluminarSecuencia(){
-        for(var i=0; i < this.nivel; i++){
-            var color = this.transformarNumeroAColor(this.secuencia[i])
-            setTimeout(() => this.iluminarColor(color), 1000 * i)
+        for(let i=0; i < this.nivel; i++){ 
+            let color = this.transformarNumeroAColor(this.secuencia[i])
+            setTimeout(() =>this.iluminarColor(color), 1000 * i)
         }
     }
 
     iluminarColor(color){
         this.colores[color].classList.add('light')
-        setTimeout(()=> this.apagarColor(color),450)
+        setTimeout(()=> this.apagarColor(color),400)
     }
 
     apagarColor(color){
